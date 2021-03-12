@@ -1,0 +1,13 @@
+lenguaje: java
+branches:
+    only:
+	   - devs
+	   - master
+notifications:
+    email:
+	  recipients: 
+	jesusltm@gmail.com
+install:
+  - mvn install -DskipTest=true -Dmaven.javadoc.skip=true -B -V
+script:
+  - mvn verify
